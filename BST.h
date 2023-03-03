@@ -116,13 +116,13 @@ void postOrder(TreeNodePtr treePtr) {
 
 void printtree(TreeNodePtr treePtr,int x) {
   // if tree is not empty, then traverse
-  TreeNodePtr tmp = treePtr;
+  
   if (treePtr != NULL) {
     
     printtree(treePtr->rightPtr,x+1); // Recursion to the right
     
     for(int i=0;i<x;i++)printf("     ");
-    if(treePtr = tmp)printf("%d\n", treePtr->data);
+    if(x==0)printf("%d\n", treePtr->data);
     else printf("%5d\n", treePtr->data); // print the value
     
     printtree(treePtr->leftPtr,x+1); // Recursion to the left
